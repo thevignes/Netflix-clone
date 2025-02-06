@@ -1,0 +1,203 @@
+.hero{
+  position: relative;
+  height: 100vh; 
+  display: flex;
+  margin-bottom:50px;
+}
+
+.banner-img{
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent,black 70%);
+  -weblit-mask-image : linear-gradient(to  right, transparent black 75%)
+}
+
+.hero-caption{
+  position: absolute;
+  width: 100%;
+  padding-left:6%;
+  bottom: 0;
+}
+
+.caption-img{
+  width:90%;
+  max-width: 410px;
+  margin-bottom: 28px;
+}
+
+.hero-caption p {
+  max-width: 600px;
+  font-size: 18px;
+}
+
+.hero-btns {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.hero-btns .btn {
+  border: 0;
+  outline: 0;
+  padding: 8px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: capitalize;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  min-width: 120px;
+  height: 44px;
+}
+
+.hero-btns .btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.hero-btns .btn:first-child {
+  background: white;
+  color: black;
+}
+
+.hero-btns .btn.dark-btn {
+  color: #fff;
+  background-color: rgba(109, 109, 110, 0.7);
+}
+
+.hero-btns .btn:hover {
+  opacity: 0.8;
+}
+
+.more-cards{
+  padding-left: 6%;
+}
+
+/* Search Results Styles - Matching Netflix Theme */
+.search-results-container {
+  padding: 80px 6% 20px; /* Matching the 6% padding from more-cards */
+  min-height: 100vh;
+  background-color: rgb(20, 20, 20);
+}
+
+.search-results-container h2 {
+  color: white;
+  margin-bottom: 28px; /* Matching the margin from caption-img */
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  padding: 20px 0;
+}
+
+.movie-card {
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.movie-card img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.movie-card h3 {
+  color: white;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  padding: 0 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .movies-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .search-results-container {
+      padding: 80px 4% 20px;
+  }
+
+  .movies-grid {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 16px;
+  }
+
+  .movie-card h3 {
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movies-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 12px;
+  }
+}
+
+.movie-card {
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none; /* Added for Link component */
+  display: block; /* Added for Link component */
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.movie-card img {
+  width: 100%;
+  aspect-ratio: 16/9; /* Changed to match backdrop ratio */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.movie-card h3 {
+  color: white;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  padding: 0 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.movie-card .movie-year {
+  color: #999;
+  font-size: 12px;
+  margin: 0;
+  padding: 0 4px;
+}

@@ -1,0 +1,123 @@
+/* Netflix Sign-up Page Styles */
+.login {
+  height: 100vh;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.8) 100%), 
+                    url('../../assets/background_banner.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-logo {
+  width: 170px;
+  position: absolute;
+  top: 20px;
+  left: 8%;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-form h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  width: 100%;
+  height: 50px;
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+  outline: none;
+  border-radius: 5px;
+  padding: 14px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.login-form button {
+  width: 100%;
+  height: 50px;
+  background: #e50914;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-form button:hover {
+  background: #d40d14;
+}
+
+.form-help {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 12px;
+  color: #b3b3b3;
+}
+
+.form-help .remember {
+  display: flex;
+  align-items: center;
+}
+
+.form-help input {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.form-help p {
+  cursor: pointer;
+}
+
+.form-help p:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .login-logo {
+    width: 120px;
+  }
+
+  .login-form {
+    padding: 40px;
+  }
+
+  .login-form h1 {
+    font-size: 28px;
+  }
+}
+.sign{
+color: gray;
+}
+span{
+  color: rgb(198, 193, 193);
+  cursor: pointer;
+}
+.login-spinner{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items:center ;
+  justify-content: center;
+}
+.login-spinner img{
+  width: 60px;
+}
